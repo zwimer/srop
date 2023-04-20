@@ -1,12 +1,14 @@
 # srop
 A simple srop tutorial challenge
 
+_Note_: This will _not_ work if your CPU contains specialized hardware to prevent ROP.
+
 # Compilation
 
-A makefile is provided in the `src/` directory
+A Makefile is provided in the `src/` directory
 
 # Solution script
 
-The offsets may need to be changed depending on your compiler. This solution script should work as is for binaries compiled with `gcc` version `7.3.0` on `ubuntu` version `18.04`.
+The offsets may need to be changed depending on your compiler. This solution script was made for `gcc 11.3.0` on `ubuntu 22.04`; offsets might need to be changed slightly for different compilers on different versions.
 
-This script uses pwntools (python 2), it can be installed with `pip install pwntools`.
+This script uses `pwntools`, it can be installed with `pip install pwntools`.

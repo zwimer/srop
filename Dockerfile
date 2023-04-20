@@ -1,16 +1,17 @@
-FROM ubuntu:18.04
-SHELL ["/bin/bash", "-eucx"]
+FROM ubuntu:22.04
 
-ARG DEBIAN_FRONTEND=noninteractive
+# Dependencies
 RUN apt-get update
-RUN apt-get install -yq \
-	python-pip \
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq \
+	python3-pip \
 	make \
     gcc
 RUN pip install pwntools
 
-ARG SRC="/src"
-COPY ./src "${SRC}"
-COPY ./solution.py /
+# Challenge
+WORKDIR "/chal"
+COPY ./src .
+RUN make
 
-RUN cd "${SRC}" && make
+# Solution
+COPY ./solution.py .
