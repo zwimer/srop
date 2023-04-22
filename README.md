@@ -3,9 +3,13 @@ A simple srop tutorial challenge
 
 _Note_: This will _not_ work if your CPU contains specialized hardware to prevent ROP.
 
+# Docker Image
+
+`zwimer/srop` is a prebuilt docker image containing the built challenge and `solution.py`.
+
 # Compilation
 
-A Makefile is provided in the `src/` directory
+A `Makefile` is provided in the `src/` directory
 
 # Solution script
 

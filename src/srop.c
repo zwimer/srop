@@ -105,7 +105,7 @@ int main() {
 		"3. You may be able to find a useful string to get the flag in this block\n"
 		"of text! It might just be " KMAG "magenta" KNRM " :)\n"
 		"4. Your final payload should look something like this:\n"
-		KMAG "payload = offset + gadget_to_set_rax_to_15 + syscall_gadget + str(my_frame)" KNRM "\n"
+		KMAG "payload = offset + gadget_to_set_rax_to_15 + syscall_gadget + bytes(my_frame)" KNRM "\n"
 	);
 
 	// Overflow
